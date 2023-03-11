@@ -34,6 +34,7 @@ export const App = () => {
   const filterByName = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
+  
   const onDeleteContact = id => {
     setContacts(prevState => contacts.filter(contact => contact.id !== id));
   };
