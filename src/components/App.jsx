@@ -29,14 +29,14 @@ export const App = () => {
       alert(`${newContact.name} is already in contacts`);
       return;
     }
-    setContacts(prevState => [...contacts, newContact]);
+    setContacts([...contacts, newContact]);
   };
   const filterByName = event => {
-    this.setState({ [event.target.name]: event.target.value });
+    setFilter(event.target.value);
   };
-  
+
   const onDeleteContact = id => {
-    setContacts(prevState => contacts.filter(contact => contact.id !== id));
+    setContacts(contacts.filter(contact => contact.id !== id));
   };
   return (
     <Section>
